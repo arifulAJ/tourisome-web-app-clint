@@ -1,0 +1,18 @@
+.point{
+    color: rgb(27, 182, 182);
+    font-size: 40px;
+    font-weight: bolder;
+}
+.travel{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.imagefor{
+    width: 90px;
+}
+.linkfont{
+    font-size: large;
+    font-weight: bolder;
+    padding-left: 20px;
+    
+}
