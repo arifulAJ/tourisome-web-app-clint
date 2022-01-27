@@ -4,10 +4,14 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import Login from "./Components/Registaion/Login";
+import Register from "./Components/Registaion/Register";
 import Footer from "./Components/ShareComponents/Footer/Footer";
 import Navigation from "./Components/ShareComponents/Navbar/Navigation";
 import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
+import Hotels from "./Pages/Hotels/Hotels";
 import TourPlace1 from "./Pages/TourPlace/TourPlace1";
 import TourPlace2 from "./Pages/TourPlace/TourPlace2";
 import TourPlace3 from "./Pages/TourPlace/TourPlace3";
@@ -27,6 +31,10 @@ function App() {
       <Route path="/topten4" element={<TourPlace4 />} />
       <Route path="/topten5" element={<TourPlace5 />} />
       <Route path="/about" element={<About/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="/hotels" element={<Hotels/>} />
+      <Route path="/resister" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
      
     </Routes>
     <Footer/>

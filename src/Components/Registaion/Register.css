@@ -1,0 +1,53 @@
+.resisters{
+    background-color: rgb(228, 216, 228);
+}
+.forms{
+    width: 50%;
+    padding-top: 50px;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   padding-bottom: 30px;
+
+
+}
+.forms input{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin: 2px;
+    
+}
+.googlebtn{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: rgb(134, 240, 240);
+    font-size: large;
+    font-weight: bold;
+}
+.googlebtn:hover{
+    background-color: chocolate;
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+    .forms{
+        width: 80%;
+        padding-top: 50px;
+       align-items: center;
+       justify-content: center;
+       margin: auto;
+    
+    
+    
+    }
+    .forms input{
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        margin: 2px;
+        
+    }
+  }

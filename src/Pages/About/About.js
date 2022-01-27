@@ -8,7 +8,7 @@ const About = () => {
                 <div className='aboutitme'>
                     <h1>About us</h1>
                 </div>
-                <div>
+                <div className='borderSites'>
                     <img className='img-fluid' src="https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
                 </div>
 
@@ -42,7 +42,7 @@ const About = () => {
                 <h1>MEET OUR EXPERTS</h1>
                 <p className='pt-2 pb-5'>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
                 <div>
-                    <div className='row row-cols-md-4 row-cols-1 container-fluid mx-auto g-4'>
+                    <div className='row row-cols-lg-4 row-cols-sm-1 container-fluid mx-auto g-4'>
                     <div class="containers">
                 <img src="http://themecrazy.net/html/manali/img/team/1.jpg" alt="Avatar" class="image"/>
                 <h4>Jon smith</h4>

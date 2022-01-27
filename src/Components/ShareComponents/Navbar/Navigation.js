@@ -28,10 +28,11 @@ const Navigation = () => {
             Dropdown
           </a>
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li> <Link class="nav-link linkfont" to="/resister">Resister</Link></li>
+            <li> <Link class="nav-link linkfont" to="/login">Log in</Link></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li></li>
+         
           </ul>
         </li>
         <li class="nav-item px-2">
@@ -39,11 +40,11 @@ const Navigation = () => {
         </li>
         
         <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="#contact">Contact</Link>
+        <Link class="nav-link linkfont" to="/contact">Contact</Link>
         </li>
        
         <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="/dashbord">Dashbord</Link>
+        <Link class="nav-link linkfont" to="/hotels">Hotels</Link>
         </li>
        
       </ul>
