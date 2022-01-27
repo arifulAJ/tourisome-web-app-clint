@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Navigation.css'
-
+ import { HashLink as Link } from 'react-router-hash-link';
 const Navigation = () => {
     return (
         <div>
@@ -15,20 +15,13 @@ const Navigation = () => {
     <div style={{marginLeft:"auto",}}  class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul style={{marginLeft: "auto",}} class="navbar-nav me-auto mb-2 mb-lg-0 px-5">
         <li class="nav-item px-2">
+            
         <Link class="nav-link linkfont" to="/Home">Home</Link>
         </li>
         <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="/Home">About</Link>
+        <Link smooth class="nav-link linkfont" to="#tours">Tours</Link>
         </li>
-        <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="/Home">Contact</Link>
-        </li>
-        <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="/Home">Blogs</Link>
-        </li>
-        <li class="nav-item px-2">
-        <Link class="nav-link linkfont" to="/Home">Dashbord</Link>
-        </li>
+       
        
         <li class="nav-item dropdown px-2">
           <a class="nav-link dropdown-toggle linkfont"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +34,17 @@ const Navigation = () => {
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <li class="nav-item px-2">
+        <Link class="nav-link linkfont" to="/about">About</Link>
+        </li>
         
+        <li class="nav-item px-2">
+        <Link class="nav-link linkfont" to="#contact">Contact</Link>
+        </li>
+       
+        <li class="nav-item px-2">
+        <Link class="nav-link linkfont" to="/dashbord">Dashbord</Link>
+        </li>
        
       </ul>
     

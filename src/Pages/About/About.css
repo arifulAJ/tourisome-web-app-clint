@@ -1,0 +1,49 @@
+.backgrounds{
+    background-color: #F5FDFF;
+}
+.aboutitme h1{
+   margin-top: 100px;
+   text-align: center;
+   font-size: xx-large;
+   font-weight: bold;
+
+  
+
+
+}
+/* Container needed to position the overlay. Adjust the width as needed */
+.containers {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Make the image to responsive */
+
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    position: absolute; 
+    bottom: -15px; 
+    background: rgb(0, 0, 0);
+    background:#6ABE45; /* Black see-through */
+    color: #f1f1f1; 
+    width: 92%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 8px 40px;
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .containers:hover .overlay {
+    opacity: 3;
+  }

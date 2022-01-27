@@ -1,0 +1,20 @@
+.footerfat{
+    background-color: #007ACC;
+}
+.fontLink {
+list-style: none;
+}
+.fontLink li{
+    padding-left: 3px;
+}
+.fontLink li a{
+    color: white;
+}
+.linebrack{
+    border: dashed;
+    width: 50%;
+}
+.alignIte{
+   
+    padding: 10px;
+}
