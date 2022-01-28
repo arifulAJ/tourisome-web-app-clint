@@ -68,7 +68,7 @@ console.log(nameRef);
                     <button className='googlebtn' onClick={googleHandel} > sign in with google</button>
                     <p className='pt-3'><span> If Already have an account here? </span><Link to='/login' > sign in</Link></p>
                     {
-                        user.displayName
+                        user.email
                     }
                 </div>
         </div>
