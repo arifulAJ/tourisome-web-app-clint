@@ -1,0 +1,29 @@
+.hotelsArea{
+    background-color: bisque;
+   padding-bottom: 20px;
+}
+.hotelsArea form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  
+}
+.hotelsArea form input {
+    padding-top: 10px;
+    margin-top: 5px;
+}
+.hotelsArea form  textarea{
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .hotelsArea form{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      
+    }
+  }

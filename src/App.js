@@ -9,9 +9,12 @@ import Register from "./Components/Registaion/Register";
 import Footer from "./Components/ShareComponents/Footer/Footer";
 import Navigation from "./Components/ShareComponents/Navbar/Navigation";
 import About from "./Pages/About/About";
+import Adventure from "./Pages/Adventure/Adventure";
 import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
+import Booking from "./Pages/Hotels/Booking";
 import Hotels from "./Pages/Hotels/Hotels";
+import Admin from "./Pages/OnlyAdmin/Admin";
 import TourPlace1 from "./Pages/TourPlace/TourPlace1";
 import TourPlace2 from "./Pages/TourPlace/TourPlace2";
 import TourPlace3 from "./Pages/TourPlace/TourPlace3";
@@ -35,6 +38,9 @@ function App() {
       <Route path="/hotels" element={<Hotels/>} />
       <Route path="/resister" element={<Register/>} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/adventure" element={<Adventure/>} />
+      <Route path="/admin" element={<Admin/>} />
+      <Route path="/booking/:id" element={<Booking/>} />
      
     </Routes>
     <Footer/>

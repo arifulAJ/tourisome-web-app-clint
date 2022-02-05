@@ -19,7 +19,7 @@ const Navigation = () => {
         <Link class="nav-link linkfont" to="/Home">Home</Link>
         </li>
         <li class="nav-item px-2">
-        <Link smooth class="nav-link linkfont" to="#tours">Tours</Link>
+        <Link smooth class="nav-link linkfont" to="/adventure">Adventure</Link>
         </li>
        
        
@@ -30,8 +30,9 @@ const Navigation = () => {
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
             <li> <Link class="nav-link linkfont" to="/resister">Resister</Link></li>
             <li> <Link class="nav-link linkfont" to="/login">Log in</Link></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li></li>
+            <li> <Link class="nav-link linkfont" to="/admin">Admin</Link></li>
+           
+           
          
           </ul>
         </li>

@@ -4,25 +4,29 @@ import useFirebase from '../../Pages/Firbase/UseFirbase/UseFirebase';
 import './Register.css'
 
 const Register = () => {
-    const {user,setUser,signInWithGoogles,registerWithEmail,updateName}=useFirebase();
+    const {user,setUser,signInWithGoogles,registerWithEmail,updateProfile,auth}=useFirebase();
     const nameRef=useRef();
     const emailRef=useRef();
     const passwordRef=useRef();
-console.log(nameRef);
+
     const hanselRegister= e=>{
         e.preventDefault();
         const name=nameRef.current.value;
         const email=emailRef.current.value;
         const password=passwordRef.current.value;
-        console.log(name,email,password);
+        
+     
+        // console.log(name,email,password);
         registerWithEmail(email,password)
         .then((userCredential) => {
             // Signed in 
             updateName(name)
             const user = userCredential.user;
             setUser(user)
-         
+             saveUser(email,name,'POST')
+          
             // ...
+            
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -31,18 +35,44 @@ console.log(nameRef);
           });
 
     }
+    
+    const updateName=(name)=>{
+        
+          updateProfile(auth.currentUser, {
+            displayName: name
+          }).then(() => {
+            // Profile updated!
+            // ...
+          }).catch((error) => {
+            // An error occurred
+            // ...
+          });
+         }
     // google sign in 
     const googleHandel=()=>{
         signInWithGoogles()
         .then((result) => {
-          
-         setUser(result.user)
+          const user=result.user
+         setUser(user)
+         saveUser(user.email,user.displayName,'PUT')
           // ...
         }).catch((error) => {
           // Handle Errors here.
         
           // ...
         });
+    }
+    const saveUser=(email,displayName,method)=>{
+       const use={email,displayName}
+       console.log(use);
+        fetch('http://localhost:5000/users',{
+          method:method,
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(use)
+        })
+        .then()
     }
     
     return (
@@ -68,8 +98,15 @@ console.log(nameRef);
                     <button className='googlebtn' onClick={googleHandel} > sign in with google</button>
                     <p className='pt-3'><span> If Already have an account here? </span><Link to='/login' > sign in</Link></p>
                     {
-                        user.email
+                      user.email 
+                     
                     }
+                    {
+                      user.displayName
+                     
+                    }
+                    
+                  
                 </div>
         </div>
     );

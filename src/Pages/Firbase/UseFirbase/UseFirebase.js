@@ -22,20 +22,6 @@ const useFirebase=()=>{
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const updateName=(name)=>{
-        updateProfile(auth.currentUser, {
-          displayName: name
-        }).then(() => {
-          // Profile updated!
-          // window.location.reload();
-          const newUser={...user ,displayName:name}
-          setUser(newUser)
-          // ...
-        }).catch((error) => {
-          // An error occurred
-          // ...
-        });
-       }
 
     useEffect(()=>{
         const unsubscribe= onAuthStateChanged(auth, (user) => {
@@ -68,7 +54,8 @@ return{
     registerWithEmail,
     signInWithEmail,
     signOutPlace,
-    updateName
+    updateProfile,
+    auth
 
 
 }

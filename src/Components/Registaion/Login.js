@@ -10,7 +10,16 @@ const Login = () => {
         e.preventDefault();
         const email=emailRef.current.value;
         const password=passwordRef.current.value;
-     
+        const newUser=(email,password)
+        fetch('http://localhost:5000/user',{
+            method:'POST',
+            headers:{
+              'content-type':'application/json'
+            },
+            body:JSON.stringify(newUser)
+          })
+          .then()
+        
         signInWithEmail(email,password)
         .then((userCredential) => {
             // Signed in 
@@ -24,6 +33,7 @@ const Login = () => {
           });
 
     }
+   
     return (
         <div>
              <div className='resisters container-fluid'>
