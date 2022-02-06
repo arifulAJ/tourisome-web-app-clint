@@ -2,7 +2,9 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import './Navigation.css'
  import { HashLink as Link } from 'react-router-hash-link';
+import useFirebase from '../../../Pages/Firbase/UseFirbase/UseFirebase';
 const Navigation = () => {
+  const {admin}=useFirebase();
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -30,7 +32,9 @@ const Navigation = () => {
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
             <li> <Link class="nav-link linkfont" to="/resister">Resister</Link></li>
             <li> <Link class="nav-link linkfont" to="/login">Log in</Link></li>
-            <li> <Link class="nav-link linkfont" to="/admin">Admin</Link></li>
+           {
+             admin &&  <li> <Link class="nav-link linkfont" to="/admin">Admin</Link></li>
+           }
            
            
          

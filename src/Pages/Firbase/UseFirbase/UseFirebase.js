@@ -6,7 +6,8 @@ import initializeAuthentic from "../Firebase.init";
 initializeAuthentic();
 const GoogleProvider = new GoogleAuthProvider();
 const useFirebase=()=>{
-    const [user,setUser]=useState({})
+    const [user,setUser]=useState({});
+    const [admin,setAdmin]=useState(false);
 
     const auth = getAuth();
 
@@ -36,7 +37,14 @@ const useFirebase=()=>{
            
           });
           return ()=>unsubscribe();
-         },[])
+         },[]);
+
+        //  admin 
+          useEffect(()=>{
+            fetch(`https://boiling-meadow-47168.herokuapp.com/users/${user.email}`)
+            .then(res=>res.json())
+            .then(data=>setAdmin(data.admin))
+          },[user.email])
          const signOutPlace=()=>{
            
            signOut(auth).then(() => {
@@ -49,6 +57,7 @@ const useFirebase=()=>{
 
 return{
     user,
+    admin,
     setUser,
     signInWithGoogles,
     registerWithEmail,

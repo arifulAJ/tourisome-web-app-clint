@@ -72,7 +72,15 @@ const Register = () => {
           },
           body:JSON.stringify(use)
         })
-        .then()
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.insertedId){
+                alert("Successfully added ");
+              
+              
+
+            }
+        })
     }
     
     return (
@@ -97,15 +105,10 @@ const Register = () => {
                     </form>
                     <button className='googlebtn' onClick={googleHandel} > sign in with google</button>
                     <p className='pt-3'><span> If Already have an account here? </span><Link to='/login' > sign in</Link></p>
+                   
                     {
-                      user.email 
-                     
+                      user.email
                     }
-                    {
-                      user.displayName
-                     
-                    }
-                    
                   
                 </div>
         </div>

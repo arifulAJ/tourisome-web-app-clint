@@ -1,5 +1,5 @@
 .hotelsArea{
-    background-color: bisque;
+    background-color: rgb(192, 177, 158);
    padding-bottom: 20px;
 }
 .hotelsArea form{
@@ -17,6 +17,30 @@
     padding-top: 10px;
     margin-top: 5px;
 }
+.adminHan{
+    background-color: rgb(207, 212, 210);
+
+}
+.adminHan form {
+    width: 50%;
+    margin: auto;
+  
+}
+.adminHan form input {
+    width: 100%;
+   padding: 10px 10px;
+  
+}
+.texts{
+    font-weight: bolder;
+}
+.adminHan form label {
+   font-size: large;
+   font-weight: bolder;
+  
+   
+  
+}
 
 @media screen and (max-width: 480px) {
     .hotelsArea form{
@@ -24,6 +48,14 @@
         margin: auto;
         display: flex;
         flex-direction: column;
+      
+    }
+  }
+
+@media screen and (max-width: 480px) {
+    .adminHan form {
+        width: 80%;
+        margin: auto;
       
     }
   }

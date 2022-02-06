@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Admin.css'
 
 const Admin = () => {
@@ -31,6 +31,35 @@ const Admin = () => {
             }
         })
     }
+   
+     const emailRef=useRef();
+    const [email,setEmail]=useState('')
+    
+    const handelSubmit=e=>{
+        e.preventDefault();
+      
+        setEmail(emailRef.current.value)
+      
+         const newUser={email}
+      
+        fetch('https://boiling-meadow-47168.herokuapp.com/users/admin',{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(newUser)
+
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if(data.modifiedCount){
+                alert("admin  added  successfully");
+               e.target.reset()
+
+            }
+        })
+    }
     return (
         <div className=''>
              <div className='row row-cols-md-2 row-cols-1 backgrounds'>
@@ -54,6 +83,17 @@ const Admin = () => {
                     <input type="submit" value="submit the inform" />
                    
                 </form>
+            </div>
+            {/* admin  */}
+            <div className='adminHan pt-5 pb-5 '>
+                <h1 className='text-center'> Add the Admin with name</h1>
+            <form  onSubmit={handelSubmit}>
+               
+                <label htmlFor="email">Enter the email</label><br />
+                <input type="email" name="email" id="email" ref={emailRef}  /><br />
+               
+                <input className='mt-3 texts' type="submit" value="submit here" />
+            </form>
             </div>
             
         </div>

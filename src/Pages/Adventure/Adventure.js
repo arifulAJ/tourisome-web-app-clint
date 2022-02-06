@@ -22,7 +22,7 @@ const Adventure = () => {
     }
     return (
         <div>
-            <h1> this is adventure place </h1>
+            <h1> Add the new admin with name </h1>
             <form  onSubmit={handelSubmit}>
                 <input type="text" name="" id="" ref={nameRef} />
                 <input type="email" name="" id="" placeholder='email'   ref={emailRef}/>

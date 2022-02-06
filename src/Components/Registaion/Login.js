@@ -18,7 +18,15 @@ const Login = () => {
             },
             body:JSON.stringify(newUser)
           })
-          .then()
+          .then(res=>res.json())
+          .then(data=>{
+            if(data.insertedId){
+              alert("Successfully added ");
+            
+            
+
+          }
+          })
         
         signInWithEmail(email,password)
         .then((userCredential) => {
