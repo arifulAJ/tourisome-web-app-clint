@@ -11,7 +11,7 @@ const Login = () => {
         const email=emailRef.current.value;
         const password=passwordRef.current.value;
         const newUser=(email,password)
-        fetch('http://localhost:5000/user',{
+        fetch('https://boiling-meadow-47168.herokuapp.com/user',{
             method:'POST',
             headers:{
               'content-type':'application/json'

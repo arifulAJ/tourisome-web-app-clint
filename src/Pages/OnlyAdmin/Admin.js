@@ -15,7 +15,7 @@ const Admin = () => {
       
         const hotelsInfo={url,title,infoHotel,price};
         console.log(hotelsInfo);
-        fetch('http://localhost:5000/hotels',{
+        fetch('https://boiling-meadow-47168.herokuapp.com/hotels',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

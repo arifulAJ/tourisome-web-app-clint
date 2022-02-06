@@ -5,7 +5,7 @@ import HotelsCard from './HotelsCard';
 const Hotels = () => {
     const [hotels,setHotels]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/hotels')
+        fetch('https://boiling-meadow-47168.herokuapp.com/hotels')
         .then(res=>res.json())
         .then(data=>setHotels(data))
     },[])

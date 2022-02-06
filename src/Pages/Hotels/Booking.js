@@ -5,7 +5,7 @@ const Booking = () => {
     const [hotel,setHotel]=useState({});
     const {id}=useParams();
     useEffect(()=>{
-        const url=`http://localhost:5000/hotels/${id}`
+        const url=`https://boiling-meadow-47168.herokuapp.com/hotels/${id}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setHotel(data))

@@ -10,7 +10,7 @@ const Adventure = () => {
       
         const newUser={name,email}
         console.log(newUser);
-        fetch('http://localhost:5000/users',{
+        fetch('https://boiling-meadow-47168.herokuapp.com/users',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

@@ -65,7 +65,7 @@ const Register = () => {
     const saveUser=(email,displayName,method)=>{
        const use={email,displayName}
        console.log(use);
-        fetch('http://localhost:5000/users',{
+        fetch('https://boiling-meadow-47168.herokuapp.com/users',{
           method:method,
           headers:{
             'content-type':'application/json'
